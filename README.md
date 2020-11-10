@@ -1,2 +1,170 @@
-# substrate-migrations
+# Substrate Migrations
 A repository of Substrate runtime migrations.
+
+## Contributing
+**Feel free to open PRs to include your own examples and/or notes.**
+
+## Links
++ [Storage Migrations](https://substrate.dev/docs/en/knowledgebase/runtime/upgrades#storage-migrations) on the DevHub.
++ [Substrate PRs](https://github.com/paritytech/substrate/pulls?q=is%3Apr+label%3AD1-runtime-migration) including migration relevant code.
+
+-------------------------------------
+## Migrations
+This lists PRs that include or induce storage migrations after Substrate 2.0 with some examples of
+how they were implemented in production chains.
+
+### `2020-10-21` Pallet Storage Versions
+https://github.com/paritytech/substrate/pull/7208
+
+### `2020-09-24` Time-Delay Proxies Migration Fix
+**Note:** If using the introduced migration function, you should use storage version guards to make
+sure it only runs once.
+
+https://github.com/paritytech/substrate/pull/7205
+
+## Pre 2.0 Migrations
+This lists PRs that include or induce storage migrations before Substrate 2.0 with some examples of
+how they were implemented in production chains.
+
+### `2020-09-22` Move Account Refcounts from `u8` to `u32`
+https://github.com/paritytech/substrate/pull/7164
+
+### `2020-09-22` Allow Specifying Fixed Index in `construct_runtime`
+https://github.com/paritytech/substrate/pull/6969
+
+**Examples**
++ Polkadot: https://github.com/paritytech/polkadot/pull/1692
+
+### `2020-08-23` Time-Delay Proxies
+https://github.com/paritytech/substrate/pull/6770
+
+### `2020-06-17` Next Fee Multiplier
+https://github.com/paritytech/substrate/pull/6334/
+
+**Examples**
++ Edgeware: https://github.com/hicommonwealth/substrate/pull/15
+
+### `2020-06-09` Frozen Indices
+https://github.com/paritytech/substrate/pull/6307/
+
+**Examples**
++ Edgeware: https://github.com/hicommonwealth/substrate/pull/14
+
+### `2020-06-08` Stacked Filtering
+Introduces multisigs pallet.
+
+https://github.com/paritytech/substrate/pull/6273
+
+**Examples**
++ Edgeware: https://github.com/hicommonwealth/substrate/pull/15
+
+### `2020-06-05` Staking Remove MigrateEra Storage Item
+https://github.com/paritytech/substrate/pull/6253
+
+### `2020-05-15` Democracy Weights
+Flips the deposit order of fields.
+
+https://github.com/paritytech/substrate/pull/5828
+
+**Examples**
++ Edgeware: https://github.com/hicommonwealth/substrate/pull/12
+
+### `2020-04-24` Staking Migration Version Check Fix
+https://github.com/paritytech/substrate/pull/5768
+
+### `2020-04-17` Fee Multiplier
+https://github.com/paritytech/substrate/pull/5673
+
+**Examples**
++ Edgeware: https://github.com/hicommonwealth/substrate/pull/6
+
+### `2020-04-04` Simple Staking Payouts
+https://github.com/paritytech/substrate/pull/5406
+
+**Examples**
++ Edgeware: https://github.com/hicommonwealth/edgeware-node/pull/173 and https://github.com/hicommonwealth/substrate/pull/10
+
+### `2020-03-26` Time Module Usage in Staking
+https://github.com/paritytech/substrate/pull/4662
+
+### `2020-03-26` Scheduler Introduction
+and democracy refactoring. No migration in Substrate, but might require one for chains using the pallet.
+
+https://github.com/paritytech/substrate/pull/5412
+
+**Examples**
++ Edgeware: https://github.com/hicommonwealth/substrate/pull/12
+
+### `2020-03-23` Democracy Prime Member Selection
+https://github.com/paritytech/substrate/pull/5346
+
+**Examples**
++ Edgeware: https://github.com/hicommonwealth/substrate/pull/11 and https://github.com/hicommonwealth/edgeware-node/pull/174
+
+### `2020-03-21` Democracy Redesign
+https://github.com/paritytech/substrate/pull/5294/
+
+**Examples**
++ Edgeware: https://github.com/hicommonwealth/substrate/pull/12
+
+----------------------
+### `2020-03-16` Hasher Migration (Iterable Storage Maps)
+**NOTE: If included will influence how other migrations are run. (Pre-hasher migrations cannot iterate storage easily.)**
+
+https://github.com/paritytech/substrate/pull/5226 
+
+**Examples**
++ Edgeware: https://github.com/hicommonwealth/substrate/pull/6 https://github.com/hicommonwealth/edgeware-node/pull/170
+----------------------
+
+### `2020-03-14` Unique Storage Names
+https://github.com/paritytech/substrate/pull/5010/
+
+**Examples**
++ Edgeware: https://github.com/hicommonwealth/substrate/pull/6
+
+### `2020-03-05` Introduce `on_runtime_upgrade`
+https://github.com/paritytech/substrate/pull/5058 (includes balances migration, removed in  https://github.com/paritytech/substrate/pull/5224)
+
+### `2020-03-03` Lazy Payouts
+https://github.com/paritytech/substrate/pull/4474
+
+**Examples**
++ Edgeware: https://github.com/hicommonwealth/edgeware-node/pull/173 and https://github.com/hicommonwealth/substrate/pull/10
+
+### `2020-02-24` Lazy Reaping
+https://github.com/paritytech/substrate/pull/4895
+
+**Examples**
++ Edgeware: https://github.com/hicommonwealth/substrate/pull/6/
+
+### `2020-02-14` Composite Accounts
+https://github.com/paritytech/substrate/pull/4820) (includes indices migration removed in https://github.com/paritytech/substrate/pull/5870)
+
+**Examples**
++ Edgeware: https://github.com/hicommonwealth/substrate/pull/14
+
+### `2020-02-01` Balances Refactor
+https://github.com/paritytech/substrate/pull/4649
+
+**Examples**
++ Edgeware: https://github.com/hicommonwealth/substrate/pull/6
+
+## Removed Migrations
+This lists the PRs that removed migration code from Substrate.
+
+### `2020-06-23`
+Democracy, Indices, Multisigs, Staking, Transaction Payment
+https://github.com/paritytech/substrate/pull/6476
+
+### `2020-05-03`
+Democracy, Indices, Multisig, Staking, Transaction Payment
+https://github.com/paritytech/substrate/pull/5870
+
+### `2020-03-19`
+mostly account/hasher migration, epochs, opaque hashers, grandpa authorities
+https://github.com/paritytech/substrate/pull/5291
+
+### `2020-03-12`
+Balances
+https://github.com/paritytech/substrate/pull/5224
