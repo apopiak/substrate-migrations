@@ -5,8 +5,9 @@ A repository of Substrate runtime migrations.
 **Feel free to open PRs to include your own examples and/or notes.**
 
 ## Links
-+ [Storage Migrations](https://substrate.dev/docs/en/knowledgebase/runtime/upgrades#storage-migrations) on the DevHub.
++ [Storage migrations knowledgebase article](https://substrate.dev/docs/en/knowledgebase/runtime/upgrades#storage-migrations) on the DevHub.
 + [Substrate PRs](https://github.com/paritytech/substrate/pulls?q=is%3Apr+label%3AD1-runtime-migration) including migration relevant code.
++ [Collaborative Migration Guide](https://hackmd.io/@apopiak/Hyhroh0Xv/edit) on hackmd.
 
 -------------------------------------
 ## Migrations
