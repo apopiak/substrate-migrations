@@ -155,16 +155,20 @@ This lists the PRs that removed migration code from Substrate.
 
 ### `2020-06-23`
 Democracy, Indices, Multisigs, Staking, Transaction Payment
+
 https://github.com/paritytech/substrate/pull/6476
 
 ### `2020-05-03`
-Democracy, Indices, Multisig, Staking, Transaction Payment
+Democracy, Indices, Offences, Staking, Transaction Payment
+
 https://github.com/paritytech/substrate/pull/5870
 
 ### `2020-03-19`
-mostly account/hasher migration, epochs, opaque hashers, grandpa authorities
+Mostly account/hasher migration, epochs, opaque hashers, grandpa authorities
+
 https://github.com/paritytech/substrate/pull/5291
 
 ### `2020-03-12`
 Balances
+
 https://github.com/paritytech/substrate/pull/5224
