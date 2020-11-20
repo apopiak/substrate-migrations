@@ -15,6 +15,8 @@ This lists PRs that include or induce storage migrations after Substrate 2.0 wit
 how they were implemented in production chains.
 
 ### `2020-10-21` Pallet Storage Versions
+Should not require any manual code as the version is updated automatically on every `on_runtime_upgrade`.
+
 https://github.com/paritytech/substrate/pull/7208
 
 ### `2020-09-24` Time-Delay Proxies Migration Fix
@@ -37,6 +39,9 @@ https://github.com/paritytech/substrate/pull/6969
 + Polkadot: https://github.com/paritytech/polkadot/pull/1692
 
 ### `2020-08-23` Time-Delay Proxies
+**Warning:** This migration is missing a storage guard so it might be applied more than once if included in more than one runtime uprade.
+Use the extracted migration from https://github.com/paritytech/substrate/pull/7205 in combination with a storage guard if running this migration.
+
 https://github.com/paritytech/substrate/pull/6770
 
 ### `2020-06-17` Next Fee Multiplier
