@@ -14,6 +14,24 @@ A repository of Substrate runtime migrations.
 This lists PRs that include or induce storage migrations after Substrate 2.0 with some examples of
 how they were implemented in production chains.
 
+### Q1 `2021` Migrate FRAME Pallets to Procedural `#[pallet]` Macro
+Using the procedural macro shifts the storage prefix from the `decl_storage` macro invocation to the pallet instantiation in the `construct_runtime` macro.
+As a result migrations to the new macro do not inherently require a migration, but might incidentally create the necessity if care is not taken to make sure that the prefix stays the same.
+
+https://github.com/paritytech/substrate/pull/7898
+https://github.com/paritytech/substrate/pull/7936
+https://github.com/paritytech/substrate/pull/7984
+https://github.com/paritytech/substrate/pull/8078
+
+### `2021-01-20` Fix Phragmen and Proxy Issue
+https://github.com/paritytech/substrate/pull/7040
+
+**Examples**
++ Polkadot: https://github.com/paritytech/polkadot/pull/1719
+
+### `2021-01-20` Nominator Set Kicking & Blocking
+https://github.com/paritytech/substrate/pull/7930
+
 ### `2020-10-21` Pallet Storage Versions
 Should not require any manual code as the version is updated automatically on every `on_runtime_upgrade`.
 
@@ -43,6 +61,11 @@ https://github.com/paritytech/substrate/pull/6969
 Use the extracted migration from https://github.com/paritytech/substrate/pull/7205 in combination with a storage guard if running this migration.
 
 https://github.com/paritytech/substrate/pull/6770
+
+### `2020-07-02` Allow Specifying Dispatch Origin
+**Note:** A migration function is provided, but you will need to manually trigger this migration if it applies to your runtime.
+
+https://github.com/paritytech/substrate/pull/6387
 
 ### `2020-06-17` Next Fee Multiplier
 https://github.com/paritytech/substrate/pull/6334/
