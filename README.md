@@ -18,10 +18,10 @@ how they were implemented in production chains.
 Using the procedural macro shifts the storage prefix from the `decl_storage` macro invocation to the pallet instantiation in the `construct_runtime` macro.
 As a result migrations to the new macro do not inherently require a migration, but might incidentally create the necessity if care is not taken to make sure that the prefix stays the same.
 
-https://github.com/paritytech/substrate/pull/7898
-https://github.com/paritytech/substrate/pull/7936
-https://github.com/paritytech/substrate/pull/7984
-https://github.com/paritytech/substrate/pull/8078
++ https://github.com/paritytech/substrate/pull/7898
++ https://github.com/paritytech/substrate/pull/7936
++ https://github.com/paritytech/substrate/pull/7984
++ https://github.com/paritytech/substrate/pull/8078
 
 ### `2021-01-20` Fix Phragmen and Proxy Issue
 https://github.com/paritytech/substrate/pull/7040
