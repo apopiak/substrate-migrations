@@ -22,6 +22,9 @@ As a result migrations to the new macro do not inherently require a migration, b
 + https://github.com/paritytech/substrate/pull/7936
 + https://github.com/paritytech/substrate/pull/7984
 + https://github.com/paritytech/substrate/pull/8078
++ https://github.com/paritytech/substrate/pull/8310
++ https://github.com/paritytech/substrate/pull/8337
++ https://github.com/paritytech/substrate/pull/8365
 
 ### `2021-01-20` Fix Phragmen and Proxy Issue
 https://github.com/paritytech/substrate/pull/7040
