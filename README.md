@@ -40,7 +40,9 @@ https://github.com/paritytech/substrate/pull/8221
 
 Required for: https://github.com/paritytech/substrate/pull/8220
 
-### Q1 `2021` Migrate FRAME Pallets to Procedural `#[pallet]` Macro
+### `2020-02-10` [Substrate v3.0.0](https://github.com/paritytech/substrate/releases/tag/v3.0.0)
+
+### Q1 + Q2 `2021` Migrate FRAME Pallets to Procedural `#[pallet]` Macro
 Using the procedural macro shifts the storage prefix from the `decl_storage` macro invocation to the pallet instantiation in the `construct_runtime` macro.
 As a result migrations to the new macro do not inherently require a migration, but might incidentally create the necessity if care is not taken to make sure that the prefix stays the same.
 
@@ -78,6 +80,8 @@ https://github.com/paritytech/substrate/pull/7208
 sure it only runs once.
 
 https://github.com/paritytech/substrate/pull/7205
+
+### `2020-09-22` [Substrate v2.0.0](https://github.com/paritytech/substrate/releases/tag/v2.0.0)
 
 ## Pre 2.0 Migrations
 This lists PRs that include or induce storage migrations before Substrate 2.0 with some examples of
