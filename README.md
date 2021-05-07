@@ -2,17 +2,43 @@
 A repository of Substrate runtime migrations.
 
 ## Contributing
-**Feel free to open PRs to include your own examples and/or notes.**
+**Feel free to open PRs to include your own examples of applying Substrate migrations and/or notes.**
 
 ## Links
 + [Storage migrations knowledgebase article](https://substrate.dev/docs/en/knowledgebase/runtime/upgrades#storage-migrations) on the DevHub.
 + [Substrate PRs](https://github.com/paritytech/substrate/pulls?q=is%3Apr+label%3AE1-runtimemigration) including migration relevant code.
 + [Collaborative Migration Guide](https://hackmd.io/@apopiak/Hyhroh0Xv/edit) on hackmd.
 
+## Relevant PRs
++ Run [custom OnRuntimeUpgrade first](https://github.com/paritytech/substrate/pull/8687) (before `frame_system`)
+
 -------------------------------------
 ## Migrations
 This lists PRs that include or induce storage migrations after Substrate 2.0 with some examples of
 how they were implemented in production chains.
+
+### `2021-05-03` Remove Offence Delay
+https://github.com/paritytech/substrate/pull/8414
+
+### `2021-03-20` Decouple Staking and Election - Part 2.1: Unleash Multi Phase
+https://github.com/paritytech/substrate/pull/8113
+
+**Examples**
++ Polkadot: https://github.com/paritytech/polkadot/pull/2432
+
+### `2021-03-12` Update Contracts Schedule to v3
+https://github.com/paritytech/substrate/pull/8231
+
+### `2021-03-10` Babe Epoch Configurations
+https://github.com/paritytech/substrate/pull/8072
+
+**Examples**
++ Polkadot: https://github.com/paritytech/polkadot/pull/2467
+
+### `2021-03-03` Self-Sufficient Ref-Counting
+https://github.com/paritytech/substrate/pull/8221
+
+Required for: https://github.com/paritytech/substrate/pull/8220
 
 ### Q1 `2021` Migrate FRAME Pallets to Procedural `#[pallet]` Macro
 Using the procedural macro shifts the storage prefix from the `decl_storage` macro invocation to the pallet instantiation in the `construct_runtime` macro.
@@ -25,6 +51,13 @@ As a result migrations to the new macro do not inherently require a migration, b
 + https://github.com/paritytech/substrate/pull/8310
 + https://github.com/paritytech/substrate/pull/8337
 + https://github.com/paritytech/substrate/pull/8365
++ https://github.com/paritytech/substrate/pull/8440
++ https://github.com/paritytech/substrate/pull/8448
++ https://github.com/paritytech/substrate/pull/8452
++ https://github.com/paritytech/substrate/pull/8465
++ https://github.com/paritytech/substrate/pull/8620
++ https://github.com/paritytech/substrate/pull/8663
++ https://github.com/paritytech/substrate/pull/8724
 
 ### `2021-01-20` Fix Phragmen and Proxy Issue
 https://github.com/paritytech/substrate/pull/7040
