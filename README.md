@@ -42,6 +42,16 @@ Required for: https://github.com/paritytech/substrate/pull/8220
 
 ### `2020-02-10` [Substrate v3.0.0](https://github.com/paritytech/substrate/releases/tag/v3.0.0)
 
+### `2021-03-07` Put initial data to storage with pallet deployment
+Uses `PalletVersion` to determine that pallet was not present before to do initial migration of data to storage.
+
++ https://github.com/galacticcouncil/HydraDX-node/pull/132
+
+### `2021-03-07` Update storage type from Vec to OrderedSet
+Uses `PalletVersion`
+
++ https://github.com/galacticcouncil/HydraDX-node/pull/130
+
 ### Q1 + Q2 `2021` Migrate FRAME Pallets to Procedural `#[pallet]` Macro
 Using the procedural macro shifts the storage prefix from the `decl_storage` macro invocation to the pallet instantiation in the `construct_runtime` macro.
 As a result migrations to the new macro do not inherently require a migration, but might incidentally create the necessity if care is not taken to make sure that the prefix stays the same.
