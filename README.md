@@ -13,9 +13,9 @@ A repository of Substrate runtime migrations.
 + Run [custom OnRuntimeUpgrade first](https://github.com/paritytech/substrate/pull/8687) (before `frame_system`)
 
 -------------------------------------
-## Migrations
-This lists PRs that include or induce storage migrations after Substrate 2.0 with some examples of
-how they were implemented in production chains.
+## FRAME Migrations
+This lists PRs that include or induce storage migrations in FRAME pallets after Substrate 2.0 with
+some examples of how they were implemented in production chains.
 
 ### `2021-05-03` Remove Offence Delay
 https://github.com/paritytech/substrate/pull/8414
@@ -241,3 +241,16 @@ https://github.com/paritytech/substrate/pull/5291
 Balances
 
 https://github.com/paritytech/substrate/pull/5224
+
+-------------------------------------
+
+## Non-FRAME Migrations
+### `2021-03-07` Put initial data to storage with pallet deployment
+Uses `PalletVersion` to determine that pallet was not present before to do initial migration of data to storage.
+
++ https://github.com/galacticcouncil/HydraDX-node/pull/132
+
+### `2021-03-07` Update storage type from Vec to OrderedSet
+Uses `PalletVersion`
+
++ https://github.com/galacticcouncil/HydraDX-node/pull/130
