@@ -17,6 +17,23 @@ A repository of Substrate runtime migrations.
 This lists PRs that include or induce storage migrations in FRAME pallets after Substrate 2.0 with
 some examples of how they were implemented in production chains.
 
+### `2021-06-16` Add Control to Growth of the Staking Pallet
+Introduces counts for the nominators and validators.
+
+https://github.com/paritytech/substrate/pull/8920
+
+### `2021-05-28` Simple `MaxBoundedLen` Implementations
+Two potential reasons for migrations:
+1. The assets and proxy pallets now use `BoundedVec`, so if the storage contains entries that overshoot the configured `StringLimit` for assets or `MaxProxies` for proxy they will need a migration.
+2. The time delayed proxies migration function was removed.
+
+https://github.com/paritytech/substrate/pull/8793
+
+### `2021-05-13` Contracts: Move `Schedule` from Storage to `Config`
+Removes the contracts pallet's schedule from storage and puts it in the pallet configuration instead.
+
+https://github.com/paritytech/substrate/pull/8773
+
 ### `2021-05-03` Remove Offence Delay
 https://github.com/paritytech/substrate/pull/8414
 
