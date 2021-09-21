@@ -17,6 +17,25 @@ A repository of Substrate runtime migrations.
 This lists PRs that include or induce storage migrations in FRAME pallets after Substrate 2.0 with
 some examples of how they were implemented in production chains.
 
+### `2021-09-17` Implement `pallet-bags-list` and its Interfaces with `pallet-staking`
+https://github.com/paritytech/substrate/pull/9507
+
+**Examples**
++ Polkadot: https://github.com/paritytech/polkadot/pull/3413
+
+### `2021-09-06` Remove State Rent in `pallet-contracts`
+https://github.com/paritytech/substrate/pull/9669
+
+### `2021-07-21` Move `PalletVersion` Away from Crate Version
+Moves from using the Rust crate version to a dedicated version number for the pallet storage version.
+
+https://github.com/paritytech/substrate/pull/9165
+
+See https://github.com/paritytech/substrate/pull/9165#issuecomment-887675856 for how to execute the resulting storage migration.
+
+**Examples**
++ Polkadot: https://github.com/paritytech/polkadot/pull/3526
+
 ### `2021-06-16` Add Control to Growth of the Staking Pallet
 Introduces counts for the nominators and validators.
 
