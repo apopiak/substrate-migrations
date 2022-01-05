@@ -19,7 +19,7 @@ some examples of how they were implemented in production chains.
 ### `2021-12-18` Add ClassAccount Storage to `pallet-uniques`
 https://github.com/paritytech/substrate/pull/9940
 
-### `2021-12-11` Preimage Regstrar and Scheduler Integration
+### `2021-12-11` Preimage Registrar and Scheduler Integration
 https://github.com/paritytech/substrate/pull/10356
 
 ### `2021-12-7` Add Storage Deposits in `pallet-contracts`
