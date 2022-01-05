@@ -7,7 +7,6 @@ A repository of Substrate runtime migrations.
 ## Links
 + [Storage migrations knowledgebase article](https://substrate.dev/docs/en/knowledgebase/runtime/upgrades#storage-migrations) on the DevHub.
 + [Substrate PRs](https://github.com/paritytech/substrate/pulls?q=is%3Apr+label%3AE1-runtimemigration) including migration relevant code.
-+ [Collaborative Migration Guide](https://hackmd.io/@apopiak/Hyhroh0Xv/edit) on hackmd.
 
 ## Relevant PRs
 + Run [custom OnRuntimeUpgrade first](https://github.com/paritytech/substrate/pull/8687) (before `frame_system`)
@@ -16,6 +15,15 @@ A repository of Substrate runtime migrations.
 ## FRAME Migrations
 This lists PRs that include or induce storage migrations in FRAME pallets after Substrate 2.0 with
 some examples of how they were implemented in production chains.
+
+### `2021-12-18` Add ClassAccount Storage to `pallet-uniques`
+https://github.com/paritytech/substrate/pull/9940
+
+### `2021-12-11` Preimage Regstrar and Scheduler Integration
+https://github.com/paritytech/substrate/pull/10356
+
+### `2021-12-7` Add Storage Deposits in `pallet-contracts`
+https://github.com/paritytech/substrate/pull/10082
 
 ### `2021-09-17` Implement `pallet-bags-list` and its Interfaces with `pallet-staking`
 https://github.com/paritytech/substrate/pull/9507
@@ -78,9 +86,11 @@ Required for: https://github.com/paritytech/substrate/pull/8220
 
 ### `2021-02-10` [Substrate v3.0.0](https://github.com/paritytech/substrate/releases/tag/v3.0.0)
 
-### Q1 - Q3 `2021` Migrate FRAME Pallets to Procedural `#[pallet]` Macro
+### `2021` Migrate FRAME Pallets to Procedural `#[pallet]` Macro
 Using the procedural macro shifts the storage prefix from the `decl_storage` macro invocation to the pallet instantiation in the `construct_runtime` macro.
 As a result migrations to the new macro do not inherently require a migration, but might incidentally create the necessity if care is not taken to make sure that the prefix stays the same.
+
+PRs porting pallets to the new procedural macro that were merged in 2021 are listed here:
 
 + https://github.com/paritytech/substrate/pull/7898
 + https://github.com/paritytech/substrate/pull/7936
@@ -111,6 +121,9 @@ As a result migrations to the new macro do not inherently require a migration, b
 + https://github.com/paritytech/substrate/pull/9197
 + https://github.com/paritytech/substrate/pull/9566
 + https://github.com/paritytech/substrate/pull/9711
++ https://github.com/paritytech/substrate/pull/9472
++ https://github.com/paritytech/substrate/pull/9796
++ https://github.com/paritytech/substrate/pull/9878
 
 ### `2021-01-20` Fix Phragmen and Proxy Issue
 https://github.com/paritytech/substrate/pull/7040
